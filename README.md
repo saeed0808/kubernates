@@ -201,3 +201,4 @@
 
 ### K8s Talent May Be Expensive
 > If you want to get up and running with Kubernetes fast, you may not have time to develop in-house Kubernetes expertise. You’ll probably go for established Kubernetes experts. That may pose a problem because the K8s talent is not cheap. For example, according to PayScale, the average salary for the skill “Kubernetes” is $116,000 (June 2019). Budgets of many medium and small enterprises are simply too small to allow hiring established Kubernetes experts at this pay rate.
+# kubernates
