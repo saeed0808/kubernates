@@ -1,0 +1,29 @@
+# as volume
+kubectl create configmap mymap --from-file=sample.conf
+kubectl get configmap
+kubectl describe configmap mymap
+kubectl apply -f deployconfigmap.yml
+kubectl get pods
+kubectl exec -it myvolconfig -it -- /bin/bash
+kubectl delete -f deployconfigmap.yml
+
+# as a environment define
+kubectl apply -f deployenv.yml
+kubectl get pods
+kubectl exec myenvconfig -it -- /bin/bash
+env
+echo $MYENV
+kubectl delete -f deployenv.yml
+
+###########how to defile secrets ###
+echo "root" > username.txt; echo "mypassword123" > password.txt
+kubectl create secret generic mysecret --from-file=username.txt --from-file=password.txt
+kubectl get secret
+kubectl describe secret mysecret
+###########how to use in pods #####
+kubectl apply -f deploysecret.yml
+kubectl get pods
+kubectl exec myvolsecret -it -- /bin/bash
+cd /tmp; ls
+cat password.txt
+
