@@ -66,6 +66,9 @@ kubectl rollout history deployment mydeployments
 
 kubectl rollout undo deploy/mydeployments
 
+kubectl exec mydeployments-6f545464dc-wc6ld -- cat /etc/os-release
+kubectl exec mydeployments-6f545464dc-wc6ld -- ls
+kubectl exec mydeployments-6f545464dc-wc6ld -- hostname
 --------------------------Faild Deployments-------------------
 Your deploymets may get stuck trying to deploy its newest ReplicaSet without ever completing thgis can occur due to some of the following factors.
  1. Insufficent Quota
